@@ -20,12 +20,12 @@ const GlobalStyle = createGlobalStyle`
 } 
 @media (min-width: 1440px) {
   html {
-    font-size: 14px;
+    font-size: 12px;
   } 
 }
 @media (min-width: 2560px) {
   html {
-    font-size: 25px;
+    font-size: 14px;
   } 
 }
 body {
