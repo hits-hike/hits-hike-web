@@ -24,7 +24,7 @@ const StyledText = styled.p`
     height: ${props.height};
     font-weight: ${props.weight};
     text-align: ${props.align};
-    font-size: ${0.5 + props.level * 0.1}rem;
+    font-size: ${1.6 + props.level * 0.2}rem;
     color: ${props.color};
     margin: 0;
     padding: 0;
