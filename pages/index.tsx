@@ -1,12 +1,9 @@
-import Head from "next/head";
+import GNB from "../src/components/organisms/GNB";
 
 export default function Home() {
   return (
-    <div>
-      <Head>
-        <title>히츠하이크</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-    </div>
+    <>
+      <GNB></GNB>
+    </>
   );
 }
