@@ -2,11 +2,11 @@ import styled from "styled-components";
 import Colors from "../atoms/Colors";
 import Text from "../atoms/Text";
 
-export default function GlobalNavigationBar() {
+export default function GlobalNavigationBar(): JSX.Element {
   return (
     <>
       <StyledHeader>
-        <Text color={Colors.WHITE} level={5} weight={500}>
+        <Text color={Colors.WHITE} level={5} weight="bold">
           히츠하이크
         </Text>
       </StyledHeader>
@@ -21,5 +21,5 @@ const StyledHeader = styled.header`
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  padding: 0 10rem;
+  padding: 0 10%;
 `;
