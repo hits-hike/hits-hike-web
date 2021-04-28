@@ -21,11 +21,11 @@ export default function Form(props: FormProps): JSX.Element {
   };
 
   const showResult = (event) => {
+    event.preventDefault();
     if (title1 === "" || title2 === "" || title3 === "") {
       alert("제목 후보를 모두 입력해주세요");
       return;
     }
-    event.preventDefault();
     props.setIsResultVisible(!props.isResultVisible);
   };
 
