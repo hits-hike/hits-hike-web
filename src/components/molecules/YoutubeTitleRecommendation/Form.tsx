@@ -18,6 +18,7 @@ export default function Form(props: FormProps): JSX.Element {
     setTitle1("");
     setTitle2("");
     setTitle3("");
+    props.setIsResultVisible(false);
   };
 
   const showResult = (event) => {
@@ -26,7 +27,7 @@ export default function Form(props: FormProps): JSX.Element {
       alert("제목 후보를 모두 입력해주세요");
       return;
     }
-    props.setIsResultVisible(!props.isResultVisible);
+    props.setIsResultVisible(true);
   };
 
   return (
