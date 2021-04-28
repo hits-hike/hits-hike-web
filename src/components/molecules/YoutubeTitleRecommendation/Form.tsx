@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styled from "styled-components";
 import YoutubeTitleInput from "./Input";
 import Pill from "../Button/Pill";
@@ -6,19 +5,30 @@ import Pill from "../Button/Pill";
 type FormProps = {
   isResultVisible: boolean;
   setIsResultVisible: React.Dispatch<React.SetStateAction<boolean>>;
+  title1: string;
+  title2: string;
+  title3: string;
+  setTitle1: React.Dispatch<React.SetStateAction<string>>;
+  setTitle2: React.Dispatch<React.SetStateAction<string>>;
+  setTitle3: React.Dispatch<React.SetStateAction<string>>;
 };
 
-export default function Form(props: FormProps): JSX.Element {
-  const [title1, setTitle1] = useState<string>(""); // 제목 후보1
-  const [title2, setTitle2] = useState<string>(""); // 제목 후보2
-  const [title3, setTitle3] = useState<string>(""); // 제목 후보3
-
+export default function Form({
+  isResultVisible,
+  setIsResultVisible,
+  title1,
+  title2,
+  title3,
+  setTitle1,
+  setTitle2,
+  setTitle3,
+}: FormProps): JSX.Element {
   const initialize = (event) => {
     event.preventDefault();
     setTitle1("");
     setTitle2("");
     setTitle3("");
-    props.setIsResultVisible(false);
+    setIsResultVisible(false);
   };
 
   const showResult = (event) => {
@@ -27,7 +37,7 @@ export default function Form(props: FormProps): JSX.Element {
       alert("제목 후보를 모두 입력해주세요");
       return;
     }
-    props.setIsResultVisible(true);
+    setIsResultVisible(true);
   };
 
   return (
@@ -47,7 +57,7 @@ export default function Form(props: FormProps): JSX.Element {
         value={title3}
         setValue={setTitle3}
       ></YoutubeTitleInput>
-      {props.isResultVisible ? (
+      {isResultVisible ? (
         <Pill level={1} weight={500} onClick={initialize}>
           다시 입력하기
         </Pill>

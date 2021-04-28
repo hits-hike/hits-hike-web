@@ -8,6 +8,9 @@ import RecommendationResult from "../molecules/YoutubeTitleRecommendation/Result
 
 export default function YoutubeTitleRecommendation(): JSX.Element {
   const [isResultVisible, setIsResultVisible] = useState<boolean>(false);
+  const [title1, setTitle1] = useState<string>(""); // 제목 후보1
+  const [title2, setTitle2] = useState<string>(""); // 제목 후보2
+  const [title3, setTitle3] = useState<string>(""); // 제목 후보3
 
   return (
     <Wrapper>
@@ -20,8 +23,20 @@ export default function YoutubeTitleRecommendation(): JSX.Element {
         <YoutubeTitleForm
           isResultVisible={isResultVisible}
           setIsResultVisible={setIsResultVisible}
+          title1={title1}
+          title2={title2}
+          title3={title3}
+          setTitle1={setTitle1}
+          setTitle2={setTitle2}
+          setTitle3={setTitle3}
         ></YoutubeTitleForm>
-        {isResultVisible && <RecommendationResult></RecommendationResult>}
+        {isResultVisible && (
+          <RecommendationResult
+            title1={title1}
+            title2={title2}
+            title3={title3}
+          ></RecommendationResult>
+        )}
       </ContentsWrapper>
     </Wrapper>
   );
