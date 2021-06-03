@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Text from "../../atoms/Text";
 import Rank from "./Rank";
+import Bar from "./BarChart";
 
 type ResultProps = {
   title1: string;
@@ -28,9 +29,10 @@ export default function Result({
         <Rank number={3}></Rank>
         <Text level={1}>{title1}</Text>
       </TitleWithRankWrapper>
+      <Bar />
       <Text level={1} weight={500}>
-        AI를 활용해 조회수를 예측한 결과, 제목 후보 2가 제목 후보 1에 비해 42%,
-        제목 후보 3에 비해 12% 가량 조회수가 더 높을 것으로 예측됩니다.
+        AI를 활용해 조회수를 예측한 결과, 제목 후보 2가 제목 후보 1에 비해 49%,
+        제목 후보 3에 비해 18% 가량 조회수가 더 높을 것으로 예측됩니다.
       </Text>
     </Wrapper>
   );
