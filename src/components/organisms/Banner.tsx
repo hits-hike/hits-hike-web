@@ -10,7 +10,7 @@ export default function Banner(): JSX.Element {
         <Text level={10} weight="bold">
           조회수가 잘 나오는 영상의 핵심, 바로 제목!
         </Text>
-        <Text level={8} weight="bold">
+        <Text level={7} weight="bold" color={Colors.DARK_GRAY}>
           예상 조회수가 가장 높은 제목을 추천해주는 인공지능 솔루션, 히츠하이크
         </Text>
       </ContentsWrapper>
