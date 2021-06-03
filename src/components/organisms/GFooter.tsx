@@ -9,7 +9,7 @@ export default function GlobalFooter(): JSX.Element {
         히츠하이크
       </Text>
       <Text level={0} weight={500} color={Colors.BLACK}>
-        유튜브 조회수가 가장 잘 나올 수 있는 영상 제목 추천 시스템
+        유튜브 조회수가 가장 잘 나올 수 있는 영상 제목 썸네일 추천 시스템
       </Text>
       <Text level={0} color={Colors.BLACK}>
         © 2021 hits-hike. All rights reserved.
